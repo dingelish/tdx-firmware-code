@@ -23,9 +23,7 @@
 ******************************************************************************/-->
 # TDX
 
-[Build Instructions](./BUILD.md) 
-
-Trust Domain Extensions (TDX) is introducing new, architectural elements to help deploy hardware-isolated, virtual machines (VMs) called trust domains (TDs). Intel TDX is designed to isolate VMs from the virtual-machine manager (VMM)/hypervisor and any other non-TD software on the platform to protect TDs from a broad range of software. These hardware-isolated TDs include:
+Trust Domain Extensions (TDX) is introducing new architectural elements to help deploy hardware-isolated virtual machines (VMs), called trust domains (TDs). Intel TDX is designed to isolate VMs from the virtual-machine manager (VMM)/hypervisor and any other non-TD software on the platform to protect TDs from a broad range of software. These hardware-isolated TDs include:
 
 1. Secure-Arbitration Mode (SEAM) – an extension to Virtual Machines Extension (VMX) architecture to define a new VMX root mode called SEAM root. This SEAM root mode is used to host a CPU-attested module to create virtual machine (VM) guests called Trust Domains (TD).
 2. Shared bit in GPA (Guest Physical Address) to help allow TD to access shared memory.
@@ -34,6 +32,9 @@ Trust Domain Extensions (TDX) is introducing new, architectural elements to help
 5. Multi-key, total-memory-encryption (MKTME) engine designed to provide memory encryption using AES-128- XTS and integrity using 28-bit MAC and a TD-ownership bit.
 6. Remote attestation designed to provide evidence of TD executing on a genuine, Intel TDX system and its TCB (Trusted Computing Base) version.
 	
-For more details, refer https://www.intel.com/content/www/us/en/developer/articles/technical/intel-trust-domain-extensions.html under "TDX 1.5 White Papers and Specifications"
+For more details, refer to https://www.intel.com/content/www/us/en/developer/tools/trust-domain-extensions/documentation.html.
 
 This is production version source code.
+
+Building instructions of TDX 1.5.05 release could be found in [BUILD.md](BUILD.md).  
+Build instructions might defer between releases - for other releases, refer to [Releases](https://github.com/intel/tdx-module/releases) page.

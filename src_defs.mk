@@ -43,8 +43,7 @@ SRC_DIRS := include include/auto_gen src/common src/common/accessors src/common/
 			src/common/data_structures src/common/debug src/common/helpers src/common/memory_handlers \
 			src/common/metadata_handlers src/common/x86_defs src/td_dispatcher src/td_dispatcher/vm_exits \
 			src/td_transitions src/vmm_dispatcher src/vmm_dispatcher/api_calls \
-			src/common/exception_handling src/td_dispatcher/vm_exits_l2 \
-			src/vmm_dispatcher/migration_api_calls
+			src/common/exception_handling src/td_dispatcher/vm_exits_l2 src/vmm_dispatcher/migration_api_calls
 
 SRC_DIRS := $(foreach dir,$(SRC_DIRS),$(PROJ_DIR)/$(dir))
 
@@ -80,9 +79,3 @@ INCLUDE_PATH := -I$(PROJ_DIR)/include -I$(CRYPTO_LIB_BUILD_PATH)/include -I$(PRO
 # Tools
 TOOLS_DIR := $(PROJ_DIR)/tools
 PAD_BINARY_PY := $(TOOLS_DIR)/pad_binary/pad_binary.py
-
-#Python scripts
-SCRIPT := $(PROJ_DIR)/tools/tdx_auto_gen_headers/tdx_gen_headers.py
-ARCHITECTURE_FILES_PATH = $(PROJ_DIR)/tools/tdx_auto_gen_headers/architecture_files
-AUTO_GEN_PATH := $(PROJ_DIR)/include/auto_gen
-ARCHITECTURE_REPOSITORY_CLONE_PATH = $(PROJ_DIR)/tdx-flow-code
